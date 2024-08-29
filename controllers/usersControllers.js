@@ -22,8 +22,15 @@ async function createUsernamePost(req, res) {
   res.redirect("/");
 }
 
+async function deleteUsernames(req,res){
+  await db.deleteUsernames()
+  res.redirect("/")
+
+}
+
 module.exports = {
   getUsernames,
   createUsernameGet,
-  createUsernamePost
+  createUsernamePost,
+  deleteUsernames
 };

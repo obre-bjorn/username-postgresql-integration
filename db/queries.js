@@ -23,7 +23,15 @@ async function insertUsername(username){
 }
 
 
+async function deleteUsernames(){
+
+    await pool.query("DELETE FROM usernames")
+
+
+}
+
 module.exports = {
     getAllUsernames,
-    insertUsername
+    insertUsername,
+    deleteUsernames
 }

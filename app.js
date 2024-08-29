@@ -13,6 +13,7 @@ app.get('/new', userControllers.createUsernameGet)
 
 
 app.post('/new', userControllers.createUsernamePost)
+app.post('/delete', userControllers.deleteUsernames)
 
 app.get('/search/:query', (req,res) => {
     
